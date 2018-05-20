@@ -108,10 +108,8 @@ def play(board)
   until over?(board)
     turn(board)
   end
-  if won?(board) && current_player(board) == "X"
-    puts "Congratulations X!"
-  elsif won?(board) && current_player(board) == "O"
-    puts "Congratulations O!"
+  if won?(board)
+    return winner(board)
   elsif draw?(board)
     puts "Cat's Game!"
   end
